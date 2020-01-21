@@ -16,6 +16,7 @@ import {
   SignIn as SignInView,
   NotFound as NotFoundView
 } from './views';
+import DataSetsList from 'views/DataSetsList';
 
 const Routes = () => {
   return (
@@ -24,6 +25,12 @@ const Routes = () => {
         exact
         from="/"
         to="/dashboard"
+      />
+      <RouteWithLayout
+        component={DataSetsList}
+        exact
+        layout={MainLayout}
+        path="/dataSets"
       />
       <RouteWithLayout
         component={DashboardView}
