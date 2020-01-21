@@ -17,6 +17,7 @@ import {
   NotFound as NotFoundView
 } from './views';
 import DataSetsList from 'views/DataSetsList';
+import { DataDetail } from 'views/DataSetDetail';
 
 const Routes = () => {
   return (
@@ -31,6 +32,12 @@ const Routes = () => {
         exact
         layout={MainLayout}
         path="/dataSets"
+      />
+      <RouteWithLayout
+        component={DataDetail}
+        exact
+        layout={MainLayout}
+        path="/dataSetDetail"
       />
       <RouteWithLayout
         component={DashboardView}
