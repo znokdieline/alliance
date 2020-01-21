@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import TabPanel from './TabPanel';
+import ImportImages from './ImportImages';
 
 function a11yProps(index) {
   return {
@@ -17,6 +18,13 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
   },
+  bgtabs:{
+    backgroundColor:'rgb(245,245,245)',
+    color:theme.palette.text.primary
+  },
+  content:{
+    padding:theme.spacing(3)
+  }
 }));
 
 export default function SimpleTabs() {
@@ -32,19 +40,20 @@ export default function SimpleTabs() {
       <AppBar position="static">
         <Tabs
           aria-label="simple tabs example"
+          className={classes.bgtabs}
           onChange={handleChange}
           value={value}
         >
           <Tab
-            label="Item One"
+            label="Importar"
             {...a11yProps(0)}
           />
           <Tab
-            label="Item Two"
+            label="Imágenes"
             {...a11yProps(1)}
           />
           <Tab
-            label="Item Three"
+            label="Preparar"
             {...a11yProps(2)}
           />
         </Tabs>
@@ -53,19 +62,19 @@ export default function SimpleTabs() {
         index={0}
         value={value}
       >
-        Importar
+        <ImportImages/>
       </TabPanel>
       <TabPanel
         index={1}
         value={value}
       >
-        Imágenes
+        Vista de imágenes
       </TabPanel>
       <TabPanel
         index={2}
         value={value}
       >
-        Preparar
+        Etiquetar Imágenes
       </TabPanel>
     </div>
   );
