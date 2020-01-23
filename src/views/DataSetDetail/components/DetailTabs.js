@@ -5,6 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import TabPanel from './TabPanel';
 import ImportImages from './ImportImages';
+import Images from './Images/index';
 
 function a11yProps(index) {
   return {
@@ -68,7 +69,7 @@ export default function SimpleTabs() {
         index={1}
         value={value}
       >
-        Vista de imágenes
+        <Images/>
       </TabPanel>
       <TabPanel
         index={2}
