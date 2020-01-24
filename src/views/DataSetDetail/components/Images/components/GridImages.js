@@ -5,9 +5,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
-import tileData from '../../tileData';
+import tileData from '../tileData';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,6 +26,13 @@ const useStyles = makeStyles(theme => ({
 
 export default function GridImages() {
   const classes = useStyles();
+  
+  //FUNCION PARA IMPRIMIR ETIQUETAS POR SEPARADO
+  // function getTag (tags) {
+  //   tags.forEach(tag => {
+  //     return <span>{tag}</span>
+  //   });
+  // }
 
   return (
     <div>
@@ -41,22 +46,15 @@ export default function GridImages() {
           key="Subheader"
           style={{ height: 'auto' }}
         >
-          <ListSubheader component="div">December</ListSubheader>
+          <ListSubheader component="div">Filtrar Imágenes</ListSubheader>
         </GridListTile>
         {tileData.map(tile => (
           <GridListTile key={tile.img}>
-            <img src={`/images/ife/${tile.img}.jpg`} />
-            <GridListTileBar
-              actionIcon={
-                <IconButton 
-                  aria-label={`info about ${tile.title}`}
-                  className={classes.icon}
-                >
-                  <InfoIcon />
-                </IconButton>
-              }
-              subtitle={<span>by: {tile.author} title={tile.title}</span>}
+            <img 
+              alt={tile.img}
+              src={`/images/ife/${tile.img}.jpg`}
             />
+            <GridListTileBar subtitle = {tile.tags}/>
           </GridListTile>
         ))}
       </GridList>

@@ -68,7 +68,6 @@ export default class ImportImages extends Component{
             <Box id="images">
               <input
                 accept="image/*"
-                id="raised-button-file"
                 multiple
                 onChange={this.handleUpload}
                 type="file"
@@ -77,7 +76,6 @@ export default class ImportImages extends Component{
             <Box id="csv">
               <input
                 accept=".csv"
-                id="raised-button-file"
                 onChange={this.handleUpload}
                 type="file"
               />

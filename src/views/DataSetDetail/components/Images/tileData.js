@@ -2,50 +2,62 @@ const tileData = [
   {
     img:'ife1',
     title:'Image1',
+    tags:['credencial','elector']
   },
   {
     img:'ife2',
     title:'Image2',
+    tags:['credencial','elector']
   },
   {
     img:'ife3',
     title:'Image3',
+    tags:['credencial','elector']
   },
   {
     img:'ife4',
     title:'Image4',
+    tags:['credencial','elector']
   },
   {
     img:'ife5',
     title:'Image5',
+    tags:['credencial','elector']
   },
   {
     img:'ife6',
     title:'Image6',
+    tags:['credencial','elector']
   },
   {
     img:'ife7',
     title:'Image7',
+    tags:['credencial','elector']
   },
   {
     img:'ife8',
     title:'Image8',
+    tags:['credencial','elector']
   },
   {
     img:'ife9',
     title:'Image9',
+    tags:['credencial','elector']
   },
   {
     img:'ife10',
     title:'Image10',
+    tags:['credencial','elector']
   },
   {
     img:'ife11',
     title:'Image11',
+    tags:['credencial','elector']
   },
   {
     img:'ife12',
     title:'Image12',
+    tags:['credencial','elector']
   }
 ]
 export default tileData
